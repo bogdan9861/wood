@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/style.css.map">
+
+</head>
+
+<body>
+
+    <div class="_wrapper">
+        <header class="header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top__inner">
+                        <p class="header-top__address" href="#">Москва и облость</p>
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__list-item"><a class="menu__list-link" href="index.html">главная</a>
+                                </li>
+                                <li class="menu__list-item"><a class="menu__list-link" href="#">Контакты</a></li>
+                                <li class="menu__list-item"><a class="menu__list-link" href="#">Вопрос ответ</a></li>
+                            </ul>
+                        </nav>
+                        <a class="header-top__contacts-link" href="tel:+7 123 456-78-90"><span class="phone">+7 123
+                                456-78-90</span> (c 05:00 до 00:00)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bot">
+                <div class="container">
+                    <div class="header-bot__inner">
+                        <img class="logo" src="images/logo.png" alt="logo">
+                        <a class="header-bot__link" href="#">Каталог</a>
+                        <form class="header-bot__form" action="">
+                            <input class="header-bot__inp" type="text" name="" id="" placeholder="Что вы ищите?">
+                            <button class="header-bot__btn" type="submit">
+                                <img src="images/search.svg" alt="">
+                            </button>
+                        </form>
+                        <ul class="user-menu">
+                            <li class="user-menu__item">
+                                <a class="user-menu__link" href="#">
+                                    <img src="images/user.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="user-menu__item">
+                                <a class="user-menu__link" href="#">
+                                    <img src="images/fav.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="user-menu__item bascket">
+                                <a class="user-menu__link" href="#">
+                                    <img src="images/bascket.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <nav class="bredcrumbs">
+                <ul class="bredcrumbs__list">
+                    <li class="bredcrumbs__list-item home-item">
+                        <a class="bredcrumbs__list-link home-link" href="index.html">
+                            <img src="images/home.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="bredcrumbs__list-item"><a class="bredcrumbs__list-link" href="#">
+                            Розн...
+                        </a>
+                    </li>
+                    <li class="bredcrumbs__list-item"><a class="bredcrumbs__list-link" href="#">
+                            ...
+                        </a>
+                    <li class="bredcrumbs__list-item"><strong class="bredcrumbs__list-link">
+                            корзина
+                        </strong>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="_content">
+            <section class="basket">
+                <div class="container">
+                    <div class="basket__title-wrap">
+                        <h1 class="basket__title">Корзина</h1>
+                        <span class="basket__quantity-subtitle"><span id="quantity_basket">5</span>товаров</span>
+                    </div>
+                    <div class="basket__inner">
+                        <div class="basket__products">
+                            <div class="basket__products-item">
+                                <div class="basket__products-item-wrap">
+                                    <img src="images/products-img.png" alt="">
+                                    <div class="basket__products-item__content">
+                                        <h4 class="basket__products-item__name">Домик Matteo Classic</h4>
+                                        <div class="basket__products-item-product__info product__info">
+                                            <span class="product__info-value">
+                                                В наличии:
+                                                <strong id="quantity">264 шт.</strong>
+                                            </span>
+                                            <span class="product__info-value">
+                                                размер:
+                                                <strong id="quantity">20,5 см</strong>
+                                            </span>
+                                        </div>
+                                        <div class="counter">
+                                            <button class="counter__minus" id="minus">
+                                                <img src="images/count-minus.svg" alt="-">
+                                            </button>
+
+                                            <span class="count__num" id="num">0</span>
+
+                                            <button class="counter__minus" id="plus">
+                                                <img src="images/count-plus.svg" alt="+">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__products-item-right">
+                                    <button class="basket__products-item-close">
+                                        <img src="images/close.svg" alt="X">
+                                    </button>
+                                    <strong class="basket__products-item__price"> 123 900₽/шт</strong>
+                                </div>
+                            </div>
+                            <div class="basket__products-item">
+                                <div class="basket__products-item-wrap">
+                                    <img src="images/products-img.png" alt="">
+                                    <div class="basket__products-item__content">
+                                        <h4 class="basket__products-item__name">Домик Matteo Classic</h4>
+                                        <div class="basket__products-item-product__info product__info">
+                                            <span class="product__info-value">
+                                                В наличии:
+                                                <strong id="quantity">264 шт.</strong>
+                                            </span>
+                                            <span class="product__info-value">
+                                                размер:
+                                                <strong id="quantity">20,5 см</strong>
+                                            </span>
+                                        </div>
+                                        <div class="counter">
+                                            <button class="counter__minus" id="minus">
+                                                <img src="images/count-minus.svg" alt="-">
+                                            </button>
+
+                                            <span class="count__num" id="num">0</span>
+
+                                            <button class="counter__minus" id="plus">
+                                                <img src="images/count-plus.svg" alt="+">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__products-item-right">
+                                    <button class="basket__products-item-close">
+                                        <img src="images/close.svg" alt="X">
+                                    </button>
+                                    <strong class="basket__products-item__price"> 123 900₽/шт</strong>
+                                </div>
+                            </div>
+                            <div class="basket__products-item">
+                                <div class="basket__products-item-wrap">
+                                    <img src="images/products-img.png" alt="">
+                                    <div class="basket__products-item__content">
+                                        <h4 class="basket__products-item__name">Домик Matteo Classic</h4>
+                                        <div class="basket__products-item-product__info product__info">
+                                            <span class="product__info-value">
+                                                В наличии:
+                                                <strong id="quantity">264 шт.</strong>
+                                            </span>
+                                            <span class="product__info-value">
+                                                размер:
+                                                <strong id="quantity">20,5 см</strong>
+                                            </span>
+                                        </div>
+                                        <div class="counter">
+                                            <button class="counter__minus" id="minus">
+                                                <img src="images/count-minus.svg" alt="-">
+                                            </button>
+
+                                            <span class="count__num" id="num">0</span>
+
+                                            <button class="counter__minus" id="plus">
+                                                <img src="images/count-plus.svg" alt="+">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__products-item-right">
+                                    <button class="basket__products-item-close">
+                                        <img src="images/close.svg" alt="X">
+                                    </button>
+                                    <strong class="basket__products-item__price"> 123 900₽/шт</strong>
+                                </div>
+                            </div>
+                            <div class="basket__products-item">
+                                <div class="basket__products-item-wrap">
+                                    <img src="images/products-img.png" alt="">
+                                    <div class="basket__products-item__content">
+                                        <h4 class="basket__products-item__name">Домик Matteo Classic</h4>
+                                        <div class="basket__products-item-product__info product__info">
+                                            <span class="product__info-value">
+                                                В наличии:
+                                                <strong id="quantity">264 шт.</strong>
+                                            </span>
+                                            <span class="product__info-value">
+                                                размер:
+                                                <strong id="quantity">20,5 см</strong>
+                                            </span>
+                                        </div>
+                                        <div class="counter">
+                                            <button class="counter__minus" id="minus">
+                                                <img src="images/count-minus.svg" alt="-">
+                                            </button>
+
+                                            <span class="count__num" id="num">0</span>
+
+                                            <button class="counter__minus" id="plus">
+                                                <img src="images/count-plus.svg" alt="+">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__products-item-right">
+                                    <button class="basket__products-item-close">
+                                        <img src="images/close.svg" alt="X">
+                                    </button>
+                                    <strong class="basket__products-item__price"> 123 900₽/шт</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__info">
+                            <div class="basket__info-wrap">
+                                <div class="basket__info-head">
+                                    <strong>Итого:</strong>
+                                    <span class="basket__info-price red">45 980₽</span>
+                                    <s class="sale-price" id="oldPrice">430 руб</s>
+                                    <span class="product__cart-sale product__cart-sale--active" id="saleCart">-15%</span>
+                                </div>
+                                <div class="basket__info-body">
+                                    <h5 class="basket__info-body__title">Ваш заказ</h5>
+                                    <div class="basket__info-body__inner">
+                                        <div class="basket__info-body__item">
+                                            <span class="basket__info-body__item-text">Всего товаров</span>
+                                            <span class="basket__info-body__item-num">20</span>
+                                        </div>
+                                        <div class="basket__info-body__item">
+                                            <span class="basket__info-body__item-text">Сумма</span>
+                                            <span class="basket__info-body__item-num">45 980 ₽</span>
+                                        </div>
+                                    </div>
+                                    <span class="basket__info-body-text">От 3000 рублей бесплатная доставка по
+                                        украине</span>
+                                </div>
+                                
+                            </div>
+                            <div class="basket__info-bottom">
+                                <button class="basket__info-bottom__btn">Оформить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-top__inner">
+                        <div class="footer-top__contacts-wrap">
+                            <a class="header-top__contacts-link footer-top__contacts-link" href="tel:+7 123 456-78-90">
+                                <span class="phone">+7 123456-78-90</span> (c 05:00 до 00:00)
+                            </a>
+                            <a class="footer-top__mail" href="#">Написать нам</a>
+                        </div>
+                        <ul class="footer-top__social">
+                            <li class="footer-top__item">
+                                <a class="footer-top__link" href="#">
+                                    <img class="footer-top__img" src="images/telegram.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__link" href="#">
+                                    <img class="footer-top__img" src="images/facebook.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__link" href="#">
+                                    <img class="footer-top__img" src="images/vk.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__link" href="#">
+                                    <img class="footer-top__img" src="images/pinterest.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__link" href="#">
+                                    <img class="footer-top__img" src="images/youtube.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a class="footer-top__link" href="#">
+                                    <img class="footer-top__img" src="images/instagram.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="container">
+                    <div class="footer-center__inner">
+                        <nav class="footer-center__menu">
+                            <ul class="footer-center__list">
+                                <h3 class="footer-center__item-title">Навигация</h3>
+                                <li class="footer-center__list-item">
+                                    <a class="footer-center__list-link" href="#">
+                                        Новинки
+                                    </a>
+                                </li>
+                                <li class="footer-center__list-item">
+                                    <a class="footer-center__list-link" href="#">
+                                        Вопрос ответ
+                                    </a>
+                                </li>
+                                <li class="footer-center__list-item">
+                                    <a class="footer-center__list-link" href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="footer-center__list">
+                            <h3 class="footer-center__item-title">Покупателям</h3>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Каталог
+                                </a>
+                            </li>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Корзина
+                                </a>
+                            </li>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Избранные товары
+                                </a>
+                            </li>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Профиль
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer-center__list">
+                            <h3 class="footer-center__item-title">Партнёрам</h3>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Пункты самовывоза
+                                </a>
+                            </li>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Служба поддержки клиентов
+                                </a>
+                            </li>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Ищем новых поставщиков
+                                </a>
+                            </li>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Оптовые продажи
+                                </a>
+                            </li>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Центральный офис
+                                </a>
+                            </li>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Пресс-служба
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer-center__list">
+                            <h3 class="footer-center__item-title">Услуги</h3>
+                            <li class="footer-center__list-item">
+                                <a class="footer-center__list-link" href="#">
+                                    Доставка
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-center__banks">
+                        <h3 class="footer-center__item-title footer-center__item__banks-title">Мы принимаем
+                            к оплате</h3>
+                        <div class="footer-center__banks-inner">
+                            <img class="footer-center__banks-img" src="images/visa.svg" alt="">
+                            <img class="footer-center__banks-img" src="images/visa-mir.svg" alt="">
+                            <img class="footer-center__banks-img" src="images/paypal.svg" alt="">
+                            <img class="footer-center__banks-img" src="images/tinkoff.svg" alt="">
+                            <img class="footer-center__banks-img" src="images/sber.svg" alt="">
+                            <img class="footer-center__banks-img" src="images/ymoney.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bot">
+                <div class="container">
+                    <p class="footer-bot__text">© 2020 Пример - All rights reserved</p>
+                    <p class="footer-bot__text">
+                        Продолжая работу с сайтом, вы даете согласие на использование сайтом cookies и
+                        обработку
+                        персональных
+                        данных в целях функционирования сайта, проведения ретаргетинга, статистических
+                        исследований,
+                        улучшения
+                        сервиса и предоставления релевантной рекламной информации на основе ваших
+                        предпочтений и интересов.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
